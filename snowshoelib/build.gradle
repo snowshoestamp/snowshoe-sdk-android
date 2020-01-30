@@ -13,7 +13,7 @@ ext {
   siteUrl = 'https://github.com/snowshoestamp/snowshoe-android-v2'
   gitUrl = 'https://github.com/snowshoestamp/snowshoe-android-v2.git'
 
-  libraryVersion = '2.0.2'
+  libraryVersion = '3.0.0'
 
   developerId = 'snowshoestamp'
   developerName = 'snowshoe stamp'
