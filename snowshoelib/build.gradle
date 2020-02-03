@@ -2,16 +2,16 @@ apply plugin: 'com.android.library'
 
 ext {
   bintrayRepo = 'maven'
-  bintrayName = 'snowshoelib'
+  bintrayName = 'snowshoe-stamp-sdk'
 
   publishedGroupId = 'com.mattluedke'
   libraryName = 'snowshoelib'
   artifact = 'snowshoelib'
 
-  libraryDescription = 'v2 of Android wrapper for SnowShoe'
+  libraryDescription = 'SnowShoeStamp Client Api Library'
 
-  siteUrl = 'https://github.com/snowshoestamp/snowshoe-android-v2'
-  gitUrl = 'https://github.com/snowshoestamp/snowshoe-android-v2.git'
+  siteUrl = 'https://github.com/snowshoestamp/snowshoe-sdk-android'
+  gitUrl = 'https://github.com/snowshoestamp/snowshoe-sdk-android.git'
 
   libraryVersion = '3.0.0'
 
@@ -20,7 +20,7 @@ ext {
   developerEmail = 'engineering@snowshoestamp.com'
 
   licenseName = 'MIT'
-  licenseUrl = 'https://github.com/mluedke2/snowshoe-android-v2/blob/master/LICENSE'
+  licenseUrl = 'https://github.com/snowshoestamp/snowshoe-sdk-android/blob/master/LICENSE'
   allLicenses = ["MIT"]
 }
 
@@ -63,28 +63,28 @@ install {
         artifactId 'snowshoelib'
 
         // Add your description here
-        name 'snowshoelib'
-        description 'v2 of Android wrapper for SnowShoe'
-        url 'https://github.com/snowshoestamp/snowshoe-android-v2'
+        name 'snowshoe-stamp-sdk'
+        description 'SnowShoeStamp Client Api Library'
+        url 'https://github.com/snowshoestamp/snowshoe-sdk-android'
 
         // Set your license
         licenses {
           license {
             name 'MIT'
-            url 'https://github.com/mluedke2/snowshoe-android-v2/blob/master/LICENSE'
+            url 'https://github.com/snowshoestamp/snowshoe-sdk-android/blob/master/LICENSE'
           }
         }
         developers {
           developer {
             id 'snowshoestamp'
             name 'Snowshoe Stamp'
-            email 'support@snowshoestamp.com'
+            email 'engineering@snowshoestamp.com'
           }
         }
         scm {
-          connection 'https://github.com/snowshoestamp/snowshoe-android-v2.git'
-          developerConnection 'https://github.com/snowshoestamp/snowshoe-android-v2.git'
-          url 'https://github.com/snowshoestamp/snowshoe-android-v2'
+          connection 'https://github.com/snowshoestamp/snowshoe-sdk-android.git'
+          developerConnection 'https://github.com/snowshoestamp/snowshoe-sdk-android.git'
+          url 'https://github.com/snowshoestamp/snowshoe-sdk-android'
         }
       }
     }
