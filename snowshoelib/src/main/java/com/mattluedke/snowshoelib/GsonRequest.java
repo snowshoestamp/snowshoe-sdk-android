@@ -55,7 +55,7 @@ public class GsonRequest<T> extends Request<T> {
 
     @Override
     public String getBodyContentType() {
-        return "application/x-www-form-urlencoded";
+        return "application/json";
     }
 
     @Override

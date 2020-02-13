@@ -46,7 +46,7 @@ public class StampService {
     // ### GET STAMP DATA BY TOUCH POINTS SERVICE ###
     public void getStampByTouchPoints(String touchPoints) {
 
-        String params = "data="+touchPoints;
+        String params = "{\"data\":\""+touchPoints+"\"}";
 
         GsonRequest<StampResult> gsonRequest = new GsonRequest<>(API_URL, StampResult.class, mApiKey, params, didGetStampResult(), failedToGetStampResult());
 
