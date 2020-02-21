@@ -10,16 +10,18 @@ import com.android.volley.ServerError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 public class StampService {
 
     private static RequestQueue requestQueue = null;
-    private static final String API_URL = "https://ss-dev-api-stamp.azurewebsites.net/v3/stamp";
+    private static final String API_URL = "https://api.snowshoestamp.com/v3/stamp";
     private final Context context;
     private final String mApiKey;
     private final OnStampListener mOnStampListener;
@@ -44,14 +46,20 @@ public class StampService {
     }
 
     // ### GET STAMP DATA BY TOUCH POINTS SERVICE ###
-    public void getStampByTouchPoints(String touchPoints) {
+    public void getStampByTouchPoints(List<List<Float>> touchPoints) {
 
-        String params = "{\"data\":\""+touchPoints+"\"}";
+        String params = new Gson().toJson(buildStampRequest(touchPoints));
 
         GsonRequest<StampResult> gsonRequest = new GsonRequest<>(API_URL, StampResult.class, mApiKey, params, didGetStampResult(), failedToGetStampResult());
 
         executeGeneralRequest(gsonRequest);
         mOnStampListener.onStampRequestMade();
+    }
+
+    private StampRequest buildStampRequest(List<List<Float>> touchPoints) {
+        StampRequest request = new StampRequest();
+        request.setData(touchPoints);
+        return request;
     }
 
     private Response.Listener<StampResult> didGetStampResult() {

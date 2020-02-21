@@ -62,10 +62,6 @@ public class SnowShoeView extends View {
             requestData.add(pointData);
           }
 
-          Gson gson = new Gson();
-          String stringData = gson.toJson(requestData);
-          String base64data = Base64.encodeToString(stringData.getBytes(), Base64.DEFAULT);
-
           OnStampListener localStampListener = new OnStampListener() {
             @Override
             public void onStampRequestMade() {
@@ -79,7 +75,7 @@ public class SnowShoeView extends View {
             }
           };
           StampService stampService = new StampService(getContext(), mApiKey, localStampListener);
-          stampService.getStampByTouchPoints(base64data);
+          stampService.getStampByTouchPoints(requestData);
         }
       }
     }
