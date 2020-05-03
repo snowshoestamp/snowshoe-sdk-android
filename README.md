@@ -9,7 +9,7 @@ The [SnowShoe Stamp](http://www.snowshoestamp.com) is an authentication tool for
 
 ## Installation
 
-SnowShoe Stamp SDK is available through [jCenter](https://bintray.com/bintray/jcenter). To install
+SnowShoe Stamp SDK is available through [jCenter](https://bintray.com/snowshoestamp/maven/snowshoe-stamp-sdk). To install
 it, add the following line to your projects `build.gradle`repositories:
 
 ```groovy
