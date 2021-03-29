@@ -9,6 +9,8 @@ The [SnowShoe Stamp](http://www.snowshoestamp.com) is an authentication tool for
 
 ## Installation
 
+JCENTER IS BEING DEPRECATED AND WILL NO LONGER ALLOW DOWNLOADS AFTER FEBRUARY 1, 2022. PLEASE GO TO OUR DOCS PAGE TO DOWNLOAD AND UPDATE TO OUR NEWEST SDK: https://snowshoe.readme.io/docs/maintained-libraries
+
 SnowShoe Stamp SDK is available through [jCenter](https://bintray.com/snowshoestamp/maven/snowshoe-stamp-sdk). To install
 it, add the following line to your projects `build.gradle`repositories:
 
